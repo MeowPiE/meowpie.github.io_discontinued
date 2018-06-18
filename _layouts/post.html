@@ -11,9 +11,9 @@ layout: default
 <div class="post">
   <div class="post-title">{{ page.title }}</div>
   <span class="post-date">
-    <time>{{ page.date | date_to_string }}</time>
+    <time>{{ page.date | date_to_string }}</time> | <a href="{{ url }}{{ page.url }}#disqus_thread">0 Comments</a>
   </span>
-  | <a href="{{ url }}{{ page.url }}#disqus_thread">0 Comments</a>
+  
   <br><br>
 
   {{ content }}

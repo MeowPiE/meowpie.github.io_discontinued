@@ -3,6 +3,8 @@
 # # # # # # # # # # # # #
 
 name:               "MeowPiE's Lab"
+description:        "여러가지 이야기를 나누는 냥파이의 블로그<br>취미로 일상 이야기와 기록하고 싶은 내용을 담아두는 블로그입니다.
+"
 url:                "https://blog.meowpie.kr"
 timezone:           Asia/Seoul
 permalink:          /:title/
@@ -10,29 +12,17 @@ paginate:           5
 
 author:
   name:             MeowPiE
-  facebook:         # your-id
-  youtubeUser:      # your-id
-  youtubeChannel:   # your-id
   twitter:          magpiemeow
   github:           MeowPiE
   gitlab:           MeowPiE
-  stackoverflow:    # your-id
-  quora:            # your-id
-  linkedin:         # your-id
-  pinterest:        # your-id
-  googlePlus:       # your-id
-  instagram:        # your-id
-  reddit:           # your-id
-  medium:           # your-id
-  tumblr:           # your-id
   email:            email@meowpie.kr
   google-analytics: UA-120899034-1
   disqus:           meowpies-lab
 
 nav:
-  - name:           "About"
+  - name:           "about"
     url:            "/about"
-  - name:           "Archive"
+  - name:           "archive"
     url:            "/archive"
 
 sass:
@@ -48,7 +38,6 @@ defaults:
       layout:       "post"
 
 plugins:
-  - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed

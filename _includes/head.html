@@ -1,11 +1,31 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if page.title %}
+  {% capture title %}{{ page.title }} | {{ site.name }}{% endcapture %}
+{% else %}
+  {% capture title %}{{ site.name }}{% endcapture %}
+{% endif %}
+{% if page.description %}
+  {% capture description %}{{ page.description }}{% endcapture %}
+{% else %}
+  {% capture description %}{{ site.description | split: "<br>" | first }}{% endcapture %}
+{% endif %}
 
-{% seo %}
+<meta charset="utf-8">
+<meta name="description" content="{{ description }}">
+<meta name="author" content="{{ site.author.name }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta property="og:type" content="blog">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<title>{{ title }}</title>
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link type="application/xml" rel="sitemap" href="{{ site.url }}/sitemap.xml" title="{{ title }}"/>
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml" />
 
 <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+<link href='https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-
-<link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.name }}" href="/feed.xml" />
