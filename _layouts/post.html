@@ -13,28 +13,13 @@ layout: default
   <span class="post-date">
     <time>{{ page.date | date_to_string }}</time>
   </span>
-  {% if site.author.disqus %} | <a href="{{ url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}">Comment</a>{% endif %}
-  <div class="post-tag">
-      <ul>
-        {% for tag in page.tags %}
-          <li>
-            <a href="/tags#{{ tag }}">
-              <span>{{ tag }}</span>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+  | <a href="{{ url }}{{ page.url }}#disqus_thread"></a>
+  <br><br>
 
   {{ content }}
-
-  {% if site.author.disqus %}
-    <div class="post-disqus">
-        {% include disqus.html %}
-    </div>
-  {% endif %}
+  
+  <hr />
+  {% include disqus.html %}
 </div>
 
-{% if site.author.disqus %}
-  <script id="dsq-count-scr" src="//{{ site.author.disqus }}.disqus.com/count.js" async></script>
-{% endif %}
+<script id="dsq-count-scr" src="//{{ site.author.disqus }}.disqus.com/count.js" async></script>
