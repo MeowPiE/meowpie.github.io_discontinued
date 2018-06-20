@@ -1,10 +1,7 @@
-# # # # # # # # # # # # #
-#   K i k o - p l u s   #
-# # # # # # # # # # # # #
+title:              "MeowPiE's Lab"
+description:        여러가지 이야기를 나누는 냥파이의 블로그
+about:              "깃허브 페이지로 호스팅 되는 냥파이의 개인 블로그 입니다.<br>냥파이에게 블로깅은 언제까지나 취미생활이며, 영리 목적으로 사용되지 않습니다."
 
-name:               "MeowPiE's Lab"
-description:        "여러가지 이야기를 나누는 냥파이의 블로그<br>취미로 일상 이야기와 기록하고 싶은 내용을 담아두는 블로그입니다.
-"
 url:                "https://blog.meowpie.kr"
 timezone:           Asia/Seoul
 permalink:          /:title/
@@ -20,14 +17,14 @@ author:
   disqus:           meowpies-lab
 
 nav:
-  - name:           "about"
+  - title:           "about"
     url:            "/about"
-  - name:           "archive"
+  - title:           "archive"
     url:            "/archive"
 
 sass:
   sass_dir:         _sass
-  style:            :compressed
+  style:            compressed
 
 defaults:
   -

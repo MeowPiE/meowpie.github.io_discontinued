@@ -4,21 +4,20 @@ layout: default
 
 <header>
   <div class="header-small">
-    <a href="/">{{ site.name }}</a>
+    <a href="/">{{ site.title }}</a>
   </div>
 </header>
 
 <div class="post">
   <div class="post-title">{{ page.title }}</div>
   <span class="post-date">
-    <time>{{ page.date | date_to_string }}</time> | <a href="{{ url }}{{ page.url }}#disqus_thread">0 Comments</a>
+    <time>{{ page.date | date: "%-d %B %Y %R" }}</time> | <a href="{{ url }}{{ page.url }}#disqus_thread">0 Comments</a>
   </span>
   
   <br><br>
 
   {{ content }}
   
-  <hr />
   {% include disqus.html %}
 </div>
 

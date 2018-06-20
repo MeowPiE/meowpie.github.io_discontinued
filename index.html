@@ -4,11 +4,11 @@ layout: default
 
 <header class="header">
   <div class="header-title">
-    <a href="/">{{ site.name }}</a>
+    <a href="/">{{ site.title }}</a>
   </div>
   <nav class="header-nav">
     {% for nav in site.nav %}
-      <a href="{{ nav.url }}">{{ nav.name }}</a>
+      <a href="{{ nav.url }}">{{ nav.title }}</a>
     {% endfor %}
   </nav>
 </header>
@@ -30,11 +30,9 @@ layout: default
           <div class="list-post-title">
             {{ post.title }}
           </div>
-          {% if post.description %}
-            <div class="list-post-desc">
-              {{ post.description }}
-            </div>
-          {% endif %}
+          <div class="list-post-desc">
+            {{ post.excerpt }}
+          </div>
         </a>
       </div>
     {% endfor %}
